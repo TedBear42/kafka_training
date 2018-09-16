@@ -27,7 +27,8 @@ docker ps
 ```
 
 You should see something like the following
-```CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                            NAMES
+```
+   CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                            NAMES
    a7b9cf39eb05        spotify/kafka       "supervisord -n"    39 seconds ago      Up 38 seconds       0.0.0.0:2181->2181/tcp, 0.0.0.0:9092->9092/tcp   mykafka
 ```
 

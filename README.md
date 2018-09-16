@@ -80,7 +80,7 @@ mvn package
 
 If you are successful you should see jars in a newly created directory called **target**
 
-## End the Java Code
+## Execute the Java Code
 Now we want to execute our java applications.  First we will execute the consumer example with the following line
 ```
 java -cp target/KafkaTraining.jar com.malaska.kafka.training.ConsumerExeample 127.0.0.1 9092 training

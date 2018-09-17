@@ -80,15 +80,57 @@ mvn package
 
 If you are successful you should see jars in a newly created directory called **target**
 
-## Execute the Java Code
+## Execute the Basic Java Code Examples
 Now we want to execute our java applications.  First we will execute the consumer example with the following line
 ```
-java -cp target/KafkaTraining.jar com.malaska.kafka.training.ConsumerExeample 127.0.0.1 9092 training
+java -cp target/KafkaTraining.jar com.malaska.kafka.training.BasicConsumerExeample 127.0.0.1 9092 training
 ```
+The parameters are as follows:
+1. Broker Host
+2. Broker Port
+3. Topic to consume from
+
 Then in a different terminal we will execute the producer with the following line
 ```
-java -cp target/KafkaTraining.jar com.malaska.kafka.training.ProducerExample 127.0.0.1 9092 training
+java -cp target/KafkaTraining.jar com.malaska.kafka.training.BasicProducerExample \
+127.0.0.1 9092 training \
+1000 10 100 50
 ```
+There parameters are as follows:
+1. Broker Host
+2. Broker Port
+3. Topic to produce too
+4. Number of messages to send
+5. Number of messages between thread waits
+6. Wait time to slow down publishing
+7. Execute a call back every N messages
+
+Now look at the consumer terminal to see the output
+
+## Execute the Latency Java Code Examples
+Now we want to execute our java applications.  First we will execute the consumer example with the following line
+```
+java -cp target/KafkaTraining.jar com.malaska.kafka.training.LatencyConsumerExeample 127.0.0.1 9092 training
+```
+The parameters are as follows:
+1. Broker Host
+2. Broker Port
+3. Topic to consume from
+
+Then in a different terminal we will execute the producer with the following line
+```
+java -cp target/KafkaTraining.jar com.malaska.kafka.training.LatencyProducerExample \
+127.0.0.1 9092 training 1000 10 100 1 100
+```
+There parameters are as follows:
+1. Broker Host
+2. Broker Port
+3. Topic to produce too
+4. Number of messages to send
+5. Number of messages between thread waits
+6. Wait time to slow down publishing
+7. lingerMs
+8. batchSize (in Messages)
 
 Now look at the consumer terminal to see the output
 

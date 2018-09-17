@@ -32,6 +32,11 @@
             <version>${scala.version}</version>
             <!--<scope>provided</scope>-->
         </dependency>
+        <dependency>
+            <groupId>net.liftweb</groupId>
+            <artifactId>lift-json_2.11</artifactId>
+            <version>3.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>

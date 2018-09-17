@@ -1,5 +1,3 @@
 package com.malaska.kafka.training
 
-class ExampleMessage {
-
-}
+case class ExampleMessage (body:String, sentTime:Long)

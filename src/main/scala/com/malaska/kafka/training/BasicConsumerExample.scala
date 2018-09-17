@@ -15,6 +15,7 @@ object ConsumerExample {
     val kafkaServerPort = args(1)
     val topic = args(2)
 
+    println("Setting up parameters")
     val props = new Properties()
     props.put("bootstrap.servers", kafkaServerURL + ":" + kafkaServerPort)
     props.put(ConsumerConfig.GROUP_ID_CONFIG, "TrainingConsumer");
@@ -24,6 +25,7 @@ object ConsumerExample {
     props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
     props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
 
+    println("Creating Consumer")
     val consumer = new KafkaConsumer[String,String](props)
 
     val listener = new RebalanceListener
@@ -31,6 +33,7 @@ object ConsumerExample {
     consumer.subscribe(Collections.singletonList(topic), listener)
 
 
+    println("Starting Consumer")
     while (true) {
       val records = consumer.poll(1000)
       val it = records.iterator()

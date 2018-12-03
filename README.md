@@ -83,7 +83,7 @@ If you are successful you should see jars in a newly created directory called **
 ## Execute the Basic Java Code Examples
 Now we want to execute our java applications.  First we will execute the consumer example with the following line
 ```
-java -cp target/KafkaTraining.jar com.malaska.kafka.training.BasicConsumerExeample 127.0.0.1 9092 training
+java -cp target/KafkaTraining.jar com.malaska.kafka.training.BasicConsumerExample 127.0.0.1 9092 training
 ```
 The parameters are as follows:
 1. Broker Host
@@ -110,7 +110,7 @@ Now look at the consumer terminal to see the output
 ## Execute the Latency Java Code Examples
 Now we want to execute our java applications.  First we will execute the consumer example with the following line
 ```
-java -cp target/KafkaTraining.jar com.malaska.kafka.training.LatencyConsumerExeample 127.0.0.1 9092 training
+java -cp target/KafkaTraining.jar com.malaska.kafka.training.LatencyConsumerExample 127.0.0.1 9092 training
 ```
 The parameters are as follows:
 1. Broker Host

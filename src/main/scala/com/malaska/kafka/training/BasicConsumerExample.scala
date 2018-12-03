@@ -9,7 +9,7 @@ import org.apache.kafka.common.TopicPartition
 /**
   * Created by tmalaska on 6/24/17.
   */
-object ConsumerExample {
+object BasicConsumerExample {
   def main(args:Array[String]): Unit = {
     val kafkaServerURL = args(0)
     val kafkaServerPort = args(1)

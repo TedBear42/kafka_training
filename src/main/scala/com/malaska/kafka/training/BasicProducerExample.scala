@@ -9,7 +9,7 @@ import org.apache.kafka.common.Cluster
 /**
   * Created by tmalaska on 6/24/17.
   */
-object ProducerExample {
+object BasicProducerExample {
 
 
   def main(args:Array[String]): Unit = {
